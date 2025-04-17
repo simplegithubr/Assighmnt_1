@@ -4,56 +4,8 @@ import os
 from io import BytesIO
 #set up our app
 st.set_page_config(page_title="Data sweeper", layout='wide', initial_sidebar_state="expanded")
-dark_mode = st.toggle("🌙 Dark Mode", value=True)
-if dark_mode : 
-  st.markdown(
-    '''
-    <style>
-    body{
-     background-color: #121212;
-            color: white;
-    }
-    .stApp{
-      background-color: #121212;
-            color: white;
-    }
-    .stButton>button{
-     background-color: #BB86FC;
-            color: white;
-            border-radius: 8px;
-    }
-    .stDataFrame{
-      background-color: #1e1e1e;
-            color: white;
-    }
-     </style>
-    ''',
-    unsafe_allow_html=True
-)
 
 
-else : 
-  st.markdown(
-    '''
-    <style>
-    body , .stApp{
-     background-color:white;
-            color: black;
-    }
-   
-    .stButton>button{
-     background-color:  #6200ea;
-            color: white;
-            border-radius: 8px;
-    }
-    .stDataFrame{
-      background-color: #f0f0f0;
-            color: black;
-    }
-     </style>
-    ''',
-    unsafe_allow_html=True
-)
 
 st.title(" 🌙 Data sweeper")
 st.write("Transform your file between CSV and Excel formats with built_in data cleaning and visualization!")
@@ -135,7 +87,6 @@ if uploaded_files:
                     mime=mime_type
                 )
                 st.success("✅ File processed successfully!")
-
 
 
 
